@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+*
+* Created by Dexter on 10-04-2015.
+* email: barrettodexter@yahoo.com
+*
+* This code is provided on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied, including, without limitation, any warranties or conditions of
+* TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+* You are solely responsible for determining the appropriateness of using or redistributing the code
+* and assume any risks associated with Your exercise of permissions under this License.
+*
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/header_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/Marsala"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/recipient_EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="Add Recipient"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/messagebox_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Marsala"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/textMessage_EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="Type to compose" />
+
+        <ImageButton
+            android:id="@+id/send_ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_states"
+            android:src="@mipmap/ic_action_content_send"
+            android:text="Send" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/conversation_ListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/messagebox_LinearLayout"
+        android:layout_below="@id/header_LinearLayout"
+        android:scrollbars="horizontal" />
+</RelativeLayout>
