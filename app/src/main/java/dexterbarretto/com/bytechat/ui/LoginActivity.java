@@ -73,6 +73,12 @@ public class LoginActivity extends Activity {
                     if (NetworkCheck() == true) {
                         new connect().execute();
                     }
+                    else{
+                        Toast.makeText(LoginActivity.this,"Please check your network connectivity!",Toast.LENGTH_LONG).show();
+                    }
+                }
+                else{
+                    Toast.makeText(LoginActivity.this,"Username or Password Empty!",Toast.LENGTH_LONG).show();
                 }
             }
         });
